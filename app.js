@@ -110,7 +110,7 @@ client.on("message", async message => {
     
      message.channel.sendMessage({
         "embed": {
-                title: '좋은아침이에요!!^^',
+                title: '2018년 화이팅!',
                 url: 'https://images-ext-2.discordapp.net/external/FQ4WKOIk30MehKoQ9_zH-OXSU_9-5t-Nn8QNqsmCbco/https/cdn.discordapp.com/attachments/276351649898037249/397030189474775077/20182.png?width=400&height=160',
                 "image": {
                 "url": "https://images-ext-2.discordapp.net/external/FQ4WKOIk30MehKoQ9_zH-OXSU_9-5t-Nn8QNqsmCbco/https/cdn.discordapp.com/attachments/276351649898037249/397030189474775077/20182.png?width=400&height=160",
