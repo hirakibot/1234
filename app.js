@@ -114,6 +114,7 @@ client.on("message", async message => {
     message.delete().catch(O_o=>{});
 message.channel.send("여러분 2018이군요! 2018년 화이팅하시고 건강하시고 복받으시고 항상웃으면서 단꼬단과 백꼬단이 영원하길 빌며 2018년을 향해 ^^", { tts: true });
     message.delete().catch(O_o=>{});
+    }
   
   if(command === "아바타") {
 
