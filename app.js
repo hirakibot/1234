@@ -43,7 +43,7 @@ client.on("message", async message => {
   }
   
   
-  if(command === "새해복 많이받으세요") {
+  if(command === "새해복많이받으세요") {
     message.delete().catch(O_o=>{});
     
     message.channel.send("사랑합니다. 여러분!! 백호봇이 여러분의 2018을 응원하겠습니다!!!");
