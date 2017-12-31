@@ -43,6 +43,13 @@ client.on("message", async message => {
   }
   
   
+  if(command === "새해복 많이받으세요") {
+    message.delete().catch(O_o=>{});
+    
+    message.channel.send("사랑합니다. 여러분!! 백호봇이 여러분의 2018을 응원하겠습니다!!!");
+  }
+  
+  
   
  if(command === "퐁") {
    
@@ -97,6 +104,16 @@ client.on("message", async message => {
     
   }
   
+    if(command === "2018") {
+    
+     message.delete().catch(O_o=>{});
+
+    if(!message.member.roles.some(r=>["또라이", "멤버", "매니저", "ADMIN", "봇 개발자"].includes(r.name)) )
+      return message.reply("죄송하지만 백청자여러분은 권한이 없습니다");
+    
+    message.delete().catch(O_o=>{});
+message.channel.send("여러분 2018이군요! 2018년 화이팅하시고 건강하시고 복받으시고 항상웃으면서 단꼬단과 백꼬단이 영원하길 빌며 2018년을 향해 ^^", { tts: true });
+    message.delete().catch(O_o=>{});
   
   if(command === "아바타") {
 
