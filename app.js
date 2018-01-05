@@ -23,7 +23,7 @@ client.on("guildDelete", guild => {
   client.user.setGame(`호랑이굴입니다!`);
 });
 
-        bot.on('message', function(message) {
+        client.on("message", function(message) {
     if(message.author.equals(bot.user)) return;
     if(!message.content.startsWith(prefix)) return;
  
