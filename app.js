@@ -23,7 +23,51 @@ client.on("guildDelete", guild => {
   client.user.setGame(`호랑이굴입니다!`);
 });
 
-        
+        bot.on('message', function(message) {
+    if(message.author.equals(bot.user)) return;
+    if(!message.content.startsWith(prefix)) return;
+ 
+    var args = message.content.substring(prefix.length).split(' ');
+ 
+    switch(args[0].toLowerCase()) {
+            case 'help':
+ 
+            break;
+ 
+         
+            case 'play':
+                if(!args[1]) {
+                    message.channel.sendMessage("Mauvaise syntaxe ! Vous n'avez pas bien utiliser la commande ou vous n'êtes pas dans un channel vocal");
+                return;
+                }
+                if(!message.member.voiceChannel) {
+                    message.channel.sendMessage('Vous devez être dans un channel vocal !');
+                return;
+                }
+                if(!servers[message.guild.id]) servers[message.guild.id] = {
+                    queue: []
+                };
+                var server = servers[message.guild.id];
+                server.queue.push(args[1]);
+                if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection) {
+ 
+                    play(connection, message);
+                });
+                break;
+ 
+                case 'skip':
+                    var server = servers[message.guild.id];
+                    if(server.dispatcher) server.dispatcher.end();
+                break;
+ 
+                case 'stop':
+                    var server = servers[message.guild.id];
+                    if(message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
+                break;
+ 
+ 
+    }
+});
 
 client.on("message", async message => {
   if(message.author.bot) return;
@@ -156,6 +200,11 @@ message.channel.send("여러분 2018이군요! 2018년 화이팅하시고 건강
    }
   
   
+  if(command === "공지") {
+    
+     message.delete().catch(O_o=>{});
+    
+
   
   
   if(command === "방송시작") {
