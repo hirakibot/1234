@@ -50,6 +50,21 @@ client.on("message", async message => {
   }
   
   
+  if(command === "아바타") {
+    message.delete().catch(O_o=>{});
+    
+     message.channel.sendMessage({
+        "embed": {
+                title: '좋은아침이에요!!^^',
+                url: 'message.author.avatarURL',
+                "image": {
+                "url": "message.author.avatarURL",
+                }
+            }
+        });
+    
+  }
+    
   
  if(command === "퐁") {
    
