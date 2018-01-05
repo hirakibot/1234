@@ -156,11 +156,7 @@ message.channel.send("여러분 2018이군요! 2018년 화이팅하시고 건강
    }
   
   
-  if(command === "공지") {
-    
-     message.delete().catch(O_o=>{});
-    
-
+ 
   
   
   if(command === "방송시작") {
