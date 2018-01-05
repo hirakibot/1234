@@ -55,7 +55,7 @@ client.on("message", async message => {
     
      message.channel.sendMessage({
         "embed": {
-                title: '좋은아침이에요!!^^',
+                title: '당신의 아바타입니다!^^',
                 url: message.author.avatarURL,
                 "image": {
                 "url": message.author.avatarURL,
