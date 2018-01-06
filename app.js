@@ -7,17 +7,17 @@ const agree = "✅";
 const disagree = "❎";
 
 client.on('ready', () => {
-  client.user.setGame(`호랑이굴입니다!`);
+  client.user.setGame(`봇 수정중입니다.`);
 });
 
 client.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setGame(`호랑이굴입니다!`);
+  client.user.setGame(`봇 수정중입니다.`);
 });
 
 client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setGame(`호랑이굴입니다!`);
+  client.user.setGame(`봇 수정중입니다.`);
 });
 
 
@@ -147,11 +147,7 @@ message.channel.send("여러분 2018이군요! 2018년 화이팅하시고 건강
     message.delete().catch(O_o=>{});
     }
   
-  if(command === "아바타") {
 
-    message.delete().catch(O_o=>{});
-    
-  }
 
    
   if(command === "밤") {
