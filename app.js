@@ -7,8 +7,9 @@ const agree = "✅";
 const disagree = "❎";
 
 client.on('ready', () => {
-        client.setStreaming('Call of Duty: Black Ops 10', 'https://www.twitch.tv/lirik', 1);
-});
+        console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+       client.user.setGame(`호랑이굴입니다!`);
+        });
 
 client.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
