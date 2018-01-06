@@ -6,11 +6,14 @@ const embed = new Discord.RichEmbed()
 const agree = "✅";
 const disagree = "❎";
 
+client.on('ready', () => {
+        var opts = {
+                name: '봇 수정중',
+                url: 'https://www.twitch.tv/sansfree',
+                type: 1
+        };
 
-
-client.on("ready", () => {
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
-  client.user.setGame(`호랑이굴입니다!`);
+        client.setStatus(null, opts);
 });
 
 client.on("guildCreate", guild => {
